@@ -136,7 +136,6 @@ export function HeroSection() {
             </svg>
           </div>
 
-          {/* Benefits with Glassmorphism */}
           <div className="absolute inset-0 flex flex-col justify-between py-8">
             <motion.div
               className="absolute top-0 left-0 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-4 max-w-[200px] flex items-center gap-3 text-[var(--color-dark)] shadow-lg"

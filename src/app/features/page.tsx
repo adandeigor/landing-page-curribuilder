@@ -1,5 +1,8 @@
+import { FeaturesHeroSection } from "@/components/sections/features/hero-section";
+import { ModernFeaturesSection } from "@/components/sections/features/modernFeatureSection";
 import { Button } from "@/components/utils/button";
 import { FileText, Search, Zap, Edit3, Palette, Download, Rocket } from "lucide-react";
+import Image from "next/image";
 
 export default function FeaturesPage() {
     const features = [
@@ -44,35 +47,9 @@ export default function FeaturesPage() {
     return (
         <div className="min-h-screen bg-white">
             {/* Hero Section */}
-            <section className="bg-primary py-20">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                        La Technologie qui vous fait <span className="text-dark p-1 bg-yellow rounded-lg">gagner.</span>
-                    </h1>
-                    <p className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto mb-0">
-                        Découvrez l'ensemble des fonctionnalités stratégiques de Curribuilder : de l'optimisation ATS à l'export haute fidélité. 
-                        <strong className="block mt-4">Chaque outil est conçu pour l'efficacité, pas l'effort.</strong>
-                    </p>
-                </div>
-            </section>
-
+            <FeaturesHeroSection/>
             {/* Features Grid */}
-            <section className="py-24">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-                        {features.map((feature, index) => (
-                            <div key={index} className="group">
-                                <div className="w-24 h-24 bg-primary/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
-                                    {feature.icon}
-                                </div>
-                                <h3 className="text-2xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                                <h4 className="text-lg font-semibold text-primary mb-4">{feature.subtitle}</h4>
-                                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+           <ModernFeaturesSection/>
 
             {/* Comparison Section */}
             <section className="bg-gray-50 py-24">
@@ -145,8 +122,8 @@ export default function FeaturesPage() {
                         Prêt à activer votre <span className="text-primary">avantage compétitif</span> ?
                     </h2>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 max-w-2xl mx-auto">
-                        <Button 
-                            size="large" 
+                        <Button
+                            size="large"
                             className="w-full sm:w-auto"
                             icon={<Rocket className="w-5 h-5 mr-2" />}
                         >
